@@ -47,7 +47,7 @@ export const SERVICE_PAGES = {
       ["Cleanable geometry", "Minimal dead legs, sensible fall, no uncleanable internal corners — grease has nowhere to hide from the scraper."],
       ["Documentation", "As-installed drawings and the recommended service cycle handed over with the keys."],
     ],
-    pathway: "Fits all three pathways — a Practical Compliance install for a first café, through to Premium Long-Life systems for hotels and groups. The serviceability details above are never the corner we cut.",
+    pathway: "Fits all three pathways — Lease-Ready Compliance Works for a first café, through to a Long-Life System Fitout for hotels and groups. The serviceability details above are never the corner we cut.",
     related: [["Kitchen Exhaust Defit", "/services/defit"]],
     cta: { label: "Discuss an install", to: "/contact?service=installation" },
     image: "svc-install.jpg",

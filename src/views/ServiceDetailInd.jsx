@@ -159,13 +159,13 @@ export default function ServiceDetailInd() {
               <div className="mt-8 grid gap-px overflow-hidden rounded-xl border border-steel-200 bg-steel-200 md:grid-cols-2">
                 <div className="bg-white p-6">
                   <span className="font-mono text-[0.64rem] font-bold uppercase tracking-[0.16em] text-accent-deep">
-                    Practical pathway
+                    Lease-ready approach
                   </span>
                   <p className="mt-2.5 text-[0.94rem] leading-relaxed text-steel-700">{svc.budget.practical}</p>
                 </div>
                 <div className="bg-paper p-6">
                   <span className="font-mono text-[0.64rem] font-bold uppercase tracking-[0.16em] text-accent-deep">
-                    Premium pathway
+                    Long-life approach
                   </span>
                   <p className="mt-2.5 text-[0.94rem] leading-relaxed text-steel-700">{svc.budget.premium}</p>
                 </div>

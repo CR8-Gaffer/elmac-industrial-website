@@ -136,7 +136,7 @@ export default function App() {
             <div className="mt-3 grid gap-2">
               {[
                 ["All services", "/services"],
-                ["Budget pathways", "/pathways"],
+                ["Pathways", "/pathways"],
                 ["Why specialists matter", "/why-specialists"],
                 ["System Notes", "/system-notes"],
                 ["About", "/about"],

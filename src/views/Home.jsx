@@ -25,9 +25,9 @@ const PROBLEMS = [
 ];
 
 const PATHWAYS = [
-  ["Practical Compliance Setup", "Smaller venues, new operators, lease requirements. Standard-gauge, essential access, compliant airflow — honest and buildable on a real budget."],
-  ["Performance Upgrade", "For kitchens living with airflow, noise, grease or access pain. Targeted interventions, ranked by effect per dollar."],
-  ["Premium Long-Life System", "High-volume kitchens, hotels, groups, major fitouts. Heavier gauge, full access provisioning, low-noise fans, decade horizon."],
+  ["Lease-Ready Compliance Works", "Smaller venues, new operators, lease requirements. Fit-for-purpose build, essential access, compliant airflow — honest, staged and buildable."],
+  ["Performance & Access Upgrade", "For kitchens living with airflow, noise, grease or access pain. Targeted interventions, ranked by effect per dollar."],
+  ["Long-Life System Fitout", "High-volume kitchens, hotels, groups, major fitouts. Heavier gauge, full access provisioning, low-noise fans, decade horizon."],
 ];
 
 const PROCESS = [
@@ -211,9 +211,9 @@ export default function Home() {
       <section className="py-[clamp(52px,8vw,96px)]">
         <div className="wrap">
           <Reveal>
-            <span className="eyebrow">Budget pathways</span>
+            <span className="eyebrow">Pathways</span>
             <h2 className="balance mt-3.5 max-w-[26ch] text-[clamp(1.6rem,3.2vw,2.4rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">
-              A budget-friendly system still needs to be serviceable.
+              A practical system still needs to be serviceable.
             </h2>
             <p className="mt-4 max-w-[56ch] text-[1.02rem] text-steel-600">
               We support three honest levels of build — and we'll tell you which one your site actually needs,

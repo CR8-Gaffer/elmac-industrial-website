@@ -10,7 +10,7 @@ import { NOTES, SECTIONS } from "../data/systemnotes.js";
 export default function SystemNotes() {
   usePageMeta(
     "System Notes — Kitchen Exhaust Design, Access & Serviceability | Elmac Industrial",
-    "A practical knowledge base on commercial kitchen exhaust systems: access doors, fan replacement decisions, serviceability, ductwork economics, tenancy exits and budget pathways — from specialists who see systems after installation."
+    "A practical knowledge base on commercial kitchen exhaust systems: access doors, fan replacement decisions, serviceability, ductwork economics, tenancy exits and pathway choices — from specialists who see systems after installation."
   );
 
   const sections = Object.entries(SECTIONS)
