@@ -55,8 +55,8 @@ export default function Contact() {
     ];
     const subject =
       (deadline ? "[DEADLINE] " : "") + "Site inspection request — " + (g("business") || g("venue") || g("name"));
-    window.location.href = `mailto:operations@elmac.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
-    setNote("Opening your email app… if nothing happens, email operations@elmac.au directly.");
+    window.location.href = `mailto:benn@elmac.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
+    setNote("Opening your email app… if nothing happens, email benn@elmac.au directly.");
   };
 
   return (
@@ -182,7 +182,7 @@ export default function Contact() {
         <Reveal delay={0.1} className="self-start overflow-hidden rounded-2xl border border-white/[0.12]">
           {[
             ["Phone", <a key="ph" className="text-accent no-underline hover:underline" href="tel:1800435622">1800 4 ELMAC</a>],
-            ["Email", <a key="em" className="text-accent no-underline hover:underline" href="mailto:operations@elmac.au">operations@elmac.au</a>],
+            ["Email", <a key="em" className="text-accent no-underline hover:underline" href="mailto:benn@elmac.au">benn@elmac.au</a>],
             ["Address", "30 Chapman Road, Hackham SA 5163"],
             ["Licence", <span key="li" className="font-mono text-[0.9rem]">PGE342023 · AS1668 &amp; AS1668.2</span>],
             ["Region", "South Australia"],

@@ -38,4 +38,8 @@ export const DOCTRINE = {
 export const DOCTRINE_BY_SLUG = {
   installation: 21, // plan the access before the clean
   defit: 18, // we leave sites operational
+  "canopy-installation": 4, // frequency is a property of the site
+  "fan-replacement": 1, // preventative beats reactive
+  "ductwork-access-upgrades": 13, // never hide what couldn't be reached
+  "system-remediation": 16, // deliver bad news early
 };

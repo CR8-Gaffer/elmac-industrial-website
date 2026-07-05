@@ -139,8 +139,8 @@ export default function App() {
               <a href="tel:1800435622" className="text-[#B9C2CA] no-underline hover:text-accent">
                 1800 4 ELMAC
               </a>
-              <a href="mailto:operations@elmac.au" className="text-[#B9C2CA] no-underline hover:text-accent">
-                operations@elmac.au
+              <a href="mailto:benn@elmac.au" className="text-[#B9C2CA] no-underline hover:text-accent">
+                benn@elmac.au
               </a>
               <span>30 Chapman Road, Hackham SA 5163</span>
             </div>

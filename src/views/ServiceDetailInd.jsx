@@ -81,8 +81,34 @@ export default function ServiceDetailInd() {
         </div>
       </section>
 
+      {/* WHAT WE LOOK FOR */}
+      {svc.lookFor && (
+        <section className="border-t border-steel-200 bg-white py-[clamp(48px,7vw,88px)]">
+          <div className="wrap">
+            <Reveal>
+              <span className="eyebrow">What we look for</span>
+              <h2 className="balance mt-3.5 max-w-[28ch] text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">
+                Field observations from the maintenance side.
+              </h2>
+            </Reveal>
+            <div className="mt-8 grid gap-4 lg:grid-cols-3">
+              {svc.lookFor.map((t, i) => (
+                <Reveal key={i} delay={(i % 3) * 0.06}>
+                  <div className="h-full border-l-2 border-steel-300 py-1 pl-5">
+                    <span className="font-mono text-[0.64rem] font-bold uppercase tracking-[0.16em] text-steel-400">
+                      OBS.{String(i + 1).padStart(2, "0")}
+                    </span>
+                    <p className="mt-2 text-[0.95rem] leading-relaxed text-steel-700">{t}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* SCOPE + ACCESS NOTE */}
-      <section className="border-y border-steel-200 bg-white py-[clamp(48px,7vw,88px)]">
+      <section className="border-y border-steel-200 bg-paper py-[clamp(48px,7vw,88px)]">
         <div className="wrap grid items-start gap-[clamp(28px,5vw,64px)] lg:grid-cols-[1fr_1.1fr]">
           <Reveal>
             <span className="eyebrow">Scope</span>
@@ -128,13 +154,91 @@ export default function ServiceDetailInd() {
               </Reveal>
             ))}
           </div>
-          <Reveal delay={0.1}>
-            <p className="mt-7 max-w-[62ch] rounded-lg border-l-2 border-accent bg-accent/[0.06] px-4.5 py-3.5 text-[0.95rem] font-semibold text-ink">
-              {svc.pathway}
-            </p>
-          </Reveal>
+          {svc.budget ? (
+            <Reveal delay={0.1}>
+              <div className="mt-8 grid gap-px overflow-hidden rounded-xl border border-steel-200 bg-steel-200 md:grid-cols-2">
+                <div className="bg-white p-6">
+                  <span className="font-mono text-[0.64rem] font-bold uppercase tracking-[0.16em] text-accent-deep">
+                    Practical pathway
+                  </span>
+                  <p className="mt-2.5 text-[0.94rem] leading-relaxed text-steel-700">{svc.budget.practical}</p>
+                </div>
+                <div className="bg-paper p-6">
+                  <span className="font-mono text-[0.64rem] font-bold uppercase tracking-[0.16em] text-accent-deep">
+                    Premium pathway
+                  </span>
+                  <p className="mt-2.5 text-[0.94rem] leading-relaxed text-steel-700">{svc.budget.premium}</p>
+                </div>
+              </div>
+              <p className="mt-4 font-mono text-[0.68rem] uppercase tracking-[0.12em] text-steel-600">
+                Either way: access, sealing and sizing are never the corner we cut.
+              </p>
+            </Reveal>
+          ) : (
+            <Reveal delay={0.1}>
+              <p className="mt-7 max-w-[62ch] rounded-lg border-l-2 border-accent bg-accent/[0.06] px-4.5 py-3.5 text-[0.95rem] font-semibold text-ink">
+                {svc.pathway}
+              </p>
+            </Reveal>
+          )}
         </div>
       </section>
+
+      {/* DEFECTS PREVENTED */}
+      {svc.defects && (
+        <section className="border-y border-steel-200 bg-white py-[clamp(48px,7vw,88px)]">
+          <div className="wrap">
+            <Reveal>
+              <span className="eyebrow">Prevented here</span>
+              <h2 className="balance mt-3.5 max-w-[28ch] text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">
+                Common defects this work quietly deletes.
+              </h2>
+            </Reveal>
+            <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {svc.defects.map((t, i) => (
+                <Reveal key={t} delay={(i % 3) * 0.05}>
+                  <div className="flex items-start gap-3 rounded-lg border border-steel-200 bg-paper px-5 py-4">
+                    <span className="mt-0.5 font-mono text-[0.8rem] font-bold text-[#b05c10]">▲</span>
+                    <span className="text-[0.94rem] font-medium text-steel-700">{t}</span>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* PROCESS */}
+      {svc.defects && (
+        <section className="py-[clamp(48px,7vw,88px)]">
+          <div className="wrap">
+            <Reveal>
+              <span className="eyebrow">How it runs</span>
+              <h2 className="balance mt-3.5 text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">
+                Inspect to document — no surprises.
+              </h2>
+            </Reveal>
+            <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                ["Inspect", "Site, system, access and services — measured, not assumed."],
+                ["Scope", "Fixed scope in writing; exclusions named plainly."],
+                ["Recommend", "The pathway the site actually needs — including the cheaper one."],
+                [svc.processVerb || "Install / upgrade", "Licensed trades, contained work, site left operational."],
+                ["Test", "Airflow and operation verified before we call it done."],
+                ["Document", "What was done, what we found, what to watch — handed over."],
+              ].map(([t, b], i) => (
+                <Reveal key={t} delay={(i % 3) * 0.05}>
+                  <div className="h-full rounded-xl border border-steel-200 bg-white p-5">
+                    <span className="font-mono text-[0.7rem] font-bold text-accent-deep">{String(i + 1).padStart(2, "0")}</span>
+                    <h3 className="mt-2 text-[1rem] font-extrabold">{t}</h3>
+                    <p className="mt-1.5 text-[0.86rem] leading-relaxed text-steel-600">{b}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="bg-ink py-[clamp(52px,8vw,96px)] text-white">
