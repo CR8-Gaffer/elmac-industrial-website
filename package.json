@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && sh -c 'for r in services services/installation services/defit services/canopy-installation services/fan-replacement services/ductwork-access-upgrades services/system-remediation contact; do mkdir -p \"dist/$r\" && cp dist/index.html \"dist/$r/index.html\"; done; cp dist/index.html dist/404.html'",
+    "build": "vite build && sh -c 'for r in services services/installation services/defit services/canopy-installation services/fan-replacement services/ductwork-access-upgrades services/system-remediation pathways why-specialists system-notes system-notes/why-access-doors-matter system-notes/replace-or-repair-exhaust-fan system-notes/what-makes-a-system-serviceable system-notes/why-cheap-ductwork-becomes-expensive system-notes/what-landlords-expect-at-tenancy-exit system-notes/budget-vs-premium-what-changes about contact; do mkdir -p \"dist/$r\" && cp dist/index.html \"dist/$r/index.html\"; done; cp dist/index.html dist/404.html'",
     "preview": "vite preview"
   },
   "dependencies": {

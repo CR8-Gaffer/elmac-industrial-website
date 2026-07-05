@@ -4,6 +4,11 @@ import Home from "./views/Home.jsx";
 import Services from "./views/Services.jsx";
 import ServiceDetailInd from "./views/ServiceDetailInd.jsx";
 import Contact from "./views/Contact.jsx";
+import Pathways from "./views/Pathways.jsx";
+import WhySpecialists from "./views/WhySpecialists.jsx";
+import SystemNotes from "./views/SystemNotes.jsx";
+import SystemNoteDetail from "./views/SystemNoteDetail.jsx";
+import About from "./views/About.jsx";
 import MagneticButton from "./components/MagneticButton.jsx";
 import StickyCta from "./components/StickyCta.jsx";
 
@@ -71,11 +76,14 @@ export default function App() {
             <NavLink to="/services" end className={navLink}>
               Services
             </NavLink>
-            <NavLink to="/services/installation" className={navLink}>
-              Installation
+            <NavLink to="/pathways" className={navLink}>
+              Pathways
             </NavLink>
-            <NavLink to="/services/defit" className={navLink}>
-              Defit
+            <NavLink to="/system-notes" className={navLink}>
+              System Notes
+            </NavLink>
+            <NavLink to="/about" className={navLink}>
+              About
             </NavLink>
             <NavLink to="/contact" className={navLink}>
               Contact
@@ -95,6 +103,11 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/:slug" element={<ServiceDetailInd />} />
+          <Route path="/pathways" element={<Pathways />} />
+          <Route path="/why-specialists" element={<WhySpecialists />} />
+          <Route path="/system-notes" element={<SystemNotes />} />
+          <Route path="/system-notes/:slug" element={<SystemNoteDetail />} />
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Home />} />
         </Routes>
@@ -122,9 +135,11 @@ export default function App() {
             <div className="font-mono text-[0.66rem] uppercase tracking-[0.14em] text-steel-400">Services</div>
             <div className="mt-3 grid gap-2">
               {[
-                ["Kitchen exhaust installation", "/services/installation"],
-                ["Kitchen exhaust defit", "/services/defit"],
                 ["All services", "/services"],
+                ["Budget pathways", "/pathways"],
+                ["Why specialists matter", "/why-specialists"],
+                ["System Notes", "/system-notes"],
+                ["About", "/about"],
                 ["Request a site inspection", "/contact"],
               ].map(([t, to]) => (
                 <Link key={to} to={to} className="text-[#B9C2CA] no-underline hover:text-accent">

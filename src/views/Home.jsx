@@ -151,6 +151,9 @@ export default function Home() {
               know exactly which details matter once the kitchen is operating — and which shortcuts invoice you
               slowly for a decade.
             </p>
+            <Link to="/why-specialists" className="mt-4 inline-block font-bold text-accent-deep no-underline hover:underline">
+              Why dedicated specialists matter →
+            </Link>
             <DimensionDivider label="observations from the maintenance side" className="mt-8" />
           </Reveal>
           <div className="mt-2 grid gap-x-[clamp(32px,5vw,72px)] lg:grid-cols-3">
@@ -216,6 +219,9 @@ export default function Home() {
               We support three honest levels of build — and we'll tell you which one your site actually needs,
               including when it's the cheaper one. What never gets cut: access, duct sealing, fan sizing.
             </p>
+            <Link to="/pathways" className="mt-4 inline-block font-bold text-accent-deep no-underline hover:underline">
+              The full pathway guide →
+            </Link>
           </Reveal>
           <div className="mt-9 grid gap-4 md:grid-cols-3">
             {PATHWAYS.map(([t, b], i) => (
