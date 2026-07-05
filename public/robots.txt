@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cr8-gaffer.github.io/elmac-industrial/sitemap.xml
