@@ -1,28 +1,9 @@
-# Elmac Cleaning Services — website
+# Elmac Industrial — website
 
-Three-page marketing site (Home / Services / Contact). React 19 + Vite +
-Tailwind v4 + [Motion](https://motion.dev). Deployed to GitHub Pages via the
-workflow in `.github/workflows/deploy.yml` on every push to `main`.
+Dedicated specialist site: commercial kitchen exhaust installation, defit, replacement and upgrade. South Australia.
 
-## Editing
-- Copy lives in `src/views/*.jsx` — service descriptions in `Services.jsx`.
-- Imagery in `public/assets/` (Higgsfield-generated concept imagery; swap in
-  real job photography with the same filenames).
-- Before/after sliders (`src/components/BeforeAfter.jsx`) take `before` and
-  `after` image URLs — the before panes are painted placeholders until real
-  job photos are supplied.
-
-## Local dev
-```bash
-npm install
-npm run dev      # dev server
-npm run build    # production build → dist/
-```
-
-## Notes
-- Router is HashRouter for zero-config GitHub Pages hosting; switch to
-  BrowserRouter + 404 fallback when a custom domain is attached.
-- Contact form opens the visitor's mail client (mailto). Swap in a form
-  endpoint (e.g. re-point the submit handler) before heavy promotion.
-- Partner hero slides are placeholders pending approved Crows / 36ers /
-  Adelaide Oval partnership photography.
+- **Stack:** React 19 · Vite 6 · Tailwind v4 (`@tailwindcss/vite`) · Motion · self-hosted Archivo + IBM Plex Mono.
+- **Routing:** BrowserRouter with real paths — the build script copies `index.html` into each route directory plus `404.html`, so GitHub Pages serves every URL 200. Routes: `/`, `/services`, `/services/installation`, `/services/defit`, `/contact`.
+- **Base path:** `vite.config.js` → `base: "/elmac-industrial-website/"`. At elmacindustrial.com.au cutover: change to `"/"` and update sitemap/robots/OG URLs.
+- **Design system:** graphite/stainless tokens; family cyan `#44C8F4` for actions only; safety orange `#E8730C` strictly for technical markers (AccessNote). Component kit shared with the sibling Elmac site; several components are staged for later phases and currently unused by design.
+- **Deploy:** push to `main` → GitHub Actions builds and publishes to Pages (deploy retries once on transient Pages failures).

@@ -36,13 +36,6 @@ export const DOCTRINE = {
 
 // One epigraph per service detail page.
 export const DOCTRINE_BY_SLUG = {
-  "grease-filter-exchange": 3,
-  "commercial-kitchen-deep-cleaning": 15,
-  "pressure-washing": 19,
-  "high-access-facade-cleaning": 21,
-  "kes-installation": 1,
-  "scheduled-maintenance-programs": 24,
-  "window-cleaning": 26,
-  "industrial-cleaning": 20,
-  "soft-washing": 4,
+  installation: 21, // plan the access before the clean
+  defit: 18, // we leave sites operational
 };

@@ -6,6 +6,7 @@ import MagneticButton from "../components/MagneticButton.jsx";
 import Doctrine from "../components/Doctrine.jsx";
 import usePageMeta from "../lib/usePageMeta.js";
 import { SERVICE_PAGES } from "../data/services-ind.js";
+import { DOCTRINE_BY_SLUG } from "../data/doctrine.js";
 
 const A = (f) => `${import.meta.env.BASE_URL}assets/${f}`;
 
@@ -139,7 +140,7 @@ export default function ServiceDetailInd() {
       <section className="bg-ink py-[clamp(52px,8vw,96px)] text-white">
         <div className="wrap flex flex-col items-center text-center">
           <Reveal>
-            <Doctrine n={21} dark center />
+            <Doctrine n={DOCTRINE_BY_SLUG[slug] || 21} dark center />
             <h2 className="balance max-w-[26ch] text-[clamp(1.6rem,3.2vw,2.4rem)] font-extrabold leading-[1.08] tracking-[-0.02em]">
               Start with an inspection — we'll tell you what your site actually needs.
             </h2>

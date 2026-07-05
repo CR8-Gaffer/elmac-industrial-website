@@ -16,7 +16,7 @@ export default function StickyCta() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  if (pathname === "/contact") return null;
+  if (pathname.replace(/\/+$/, "") === "/contact") return null;
 
   return (
     <div

@@ -1,5 +1,4 @@
-// Operator's aside in the margin-note register — the simplified Elmac form
-// of the hanging annotation (Summit gets the true margin layout).
+// Operator's aside in the margin-note register — a simplified hanging annotation.
 export default function MarginNote({ children, className = "" }) {
   return (
     <aside
