@@ -19,8 +19,10 @@ export default function Services() {
             One system. Every stage of its life.
           </h1>
           <p className="mt-4 max-w-[58ch] text-[1.08rem] text-steel-600">
-            Commercial kitchen exhaust is the whole company — from first fitout to final defit. Every job runs the
-            same discipline: inspect, scope in writing, build for serviceability, document the handover.
+            Installation, defit, canopy, fan replacement, access upgrades and remediation across Adelaide and
+            regional SA. Kitchens keep trading: works are staged around service, after-hours where the venue
+            cannot stop. Every job runs the same discipline: inspect, scope in writing, build for serviceability,
+            document the handover.
           </p>
           <AccessNote className="mt-6 max-w-[62ch]">
             Future cleaning access is considered during installation planning on every job — a system that cannot be
@@ -59,7 +61,7 @@ export default function Services() {
             </h2>
             <p className="mt-2 max-w-[54ch] text-steel-600">
               That's what the inspection is for. We measure, we look at access and airflow, and we recommend the
-              pathway — including when it's the cheaper one.
+              pathway — including when the most practical option is the right one.
             </p>
           </Reveal>
           <Reveal delay={0.08}>
@@ -67,7 +69,7 @@ export default function Services() {
               to="/contact"
               className="inline-flex items-center gap-2 rounded-lg bg-accent px-5.5 py-3.5 text-[0.95rem] font-bold text-ink no-underline transition-colors hover:bg-[#57bce8]"
             >
-              Request a site inspection
+              Request a Free Site Inspection
             </Link>
           </Reveal>
         </div>

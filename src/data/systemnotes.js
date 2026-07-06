@@ -6,7 +6,7 @@
 export const SECTIONS = {
   1: { title: "Design & airflow", blurb: "Why systems perform — or quietly don't." },
   2: { title: "Access & serviceability", blurb: "The details that decide every future service." },
-  3: { title: "Fans & equipment", blurb: "Replace, repair, relocate — argued honestly." },
+  3: { title: "Fans & equipment", blurb: "Replace, repair, relocate — argued with reasons." },
   4: { title: "Defit & tenancy", blurb: "Exits, handbacks and landlord expectations." },
   5: { title: "Budget & pathways", blurb: "Where money is protected, and where corners bite." },
 };
@@ -44,7 +44,7 @@ export const NOTES = [
       "The wrong answer is the reflex like-for-like swap. Same unit, same position, same killer — same funeral, four years out.",
     ],
     field:
-      "Our maintenance crews open more exhaust fans than anyone in the state, and the pattern is consistent: the fans that die young are almost always the fans nobody could service. Grease builds on the impeller, balance goes, bearings follow. The 'noisy fan' complaint is usually this story, half-told.",
+      "Our maintenance crews open kitchen exhaust fans across SA regularly, and the pattern is consistent: the fans that fail early are often the fans nobody could service properly. Grease builds on the impeller, balance goes, bearings follow. The 'noisy fan' complaint is usually this story, half-told.",
     take: "If the old fan died young, the replacement should fix the reason why — or it inherits the killer.",
     doctrine: 1,
     related: ["what-makes-a-system-serviceable", "budget-vs-premium-what-changes"],
@@ -83,7 +83,7 @@ export const NOTES = [
     ],
     field:
       "When our maintenance side traces a grease leak into a neighbouring tenancy or a ceiling stain, the endpoint is almost always the same: a joint that was never sealed properly, or a run with no fall, installed by the cheaper quote years earlier. The venue paid the difference many times over before anyone found the cause.",
-    take: "The cheapest ductwork is rarely cheap. It just invoices you slowly, under other names.",
+    take: "You never get a bill that says bad ductwork — you get longer cleans, ceiling stains, and eventually a remediation quote.",
     doctrine: 10,
     related: ["what-makes-a-system-serviceable", "why-access-doors-matter"],
     offramp: ["System remediation", "/services/system-remediation"],
@@ -103,7 +103,7 @@ export const NOTES = [
     field:
       "The defits that go badly are almost never about the removal itself — they're about evidence. The exiting tenant who hands over condition photos and disconnection records ends the conversation before it starts. The one who doesn't spends weeks in email threads about a capped pipe.",
     take: "A clean exit is a documentation exercise wearing overalls. Photograph everything, terminate nothing without a licence.",
-    doctrine: 18,
+    doctrine: 9,
     related: ["why-cheap-ductwork-becomes-expensive", "budget-vs-premium-what-changes"],
     offramp: ["Kitchen exhaust defit", "/services/defit"],
     meta: "What landlords expect at commercial kitchen tenancy exit: make-good to the lease schedule, licensed disconnections, weatherproofed penetrations, and the evidence file that prevents bond disputes.",

@@ -17,11 +17,11 @@ export const SERVICE_PAGES = {
     title: "Kitchen exhaust installation, designed for the day after handover.",
     meta: {
       title: "Kitchen Exhaust Installation Adelaide | Elmac Industrial",
-      desc: "Commercial kitchen exhaust system installation — custom design, air-flow engineering and licensed installation to AS1668 & AS1668.2, with access and the maintenance cycle designed in. New venues, refits, replacements.",
+      desc: "Commercial kitchen exhaust system installation — custom design, airflow engineering and licensed installation — scoped with reference to AS 1668.2 where applicable, with access and the maintenance cycle designed in. New venues, refits, replacements.",
     },
     lead: "For new venues, refits, refurbishments, compliance upgrades and failed-system replacements. We install systems with access, airflow and future maintenance in mind — because our wider team is usually the one who comes back to service them.",
     spec: [
-      ["Standard", "AS1668 & AS1668.2"],
+      ["Standards", "AS 1668.2 where applicable"],
       ["Licence", "PGE342023 (plumbing · gas · electrical)"],
       ["Scope", "Design → manufacture → install → commission"],
       ["Stage", "New build · refit · replacement"],
@@ -32,7 +32,7 @@ export const SERVICE_PAGES = {
       { t: "Unlicensed connections are your liability", b: "Gas, electrical and plumbing connections need licensed contractors — certification, insurance and your sign-off all depend on it." },
     ],
     scope: [
-      "System design and air-flow analysis engineering",
+      "System design and airflow calculations",
       "Custom canopy and duct manufacture",
       "Licensed installation — plumbing, gas and electrical",
       "Exhaust fan, discharge cowl and make-up air supply",
@@ -50,12 +50,13 @@ export const SERVICE_PAGES = {
     pathway: "Fits all three pathways — Lease-Ready Compliance Works for a first café, through to a Long-Life System Fitout for hotels and groups. The serviceability details above are never the corner we cut.",
     related: [["Kitchen Exhaust Defit", "/services/defit"]],
     cta: { label: "Discuss an install", to: "/contact?service=installation" },
+    sysnotes: ["what-makes-a-system-serviceable", "why-access-doors-matter"],
     image: "ind-canopy-install.jpg",
   },
 
   defit: {
     code: "SERVICE 02",
-    title: "Kitchen exhaust defit — clean removal, honest handback.",
+    title: "Kitchen exhaust defit — clean removal, documented handback.",
     meta: {
       title: "Kitchen Exhaust Defit & Removal Adelaide | Elmac Industrial",
       desc: "Commercial kitchen exhaust defit for tenancy exits, landlord requirements, renovations and closures — canopies, ductwork and fans removed cleanly, penetrations made safe, site left ready for handback or refit.",
@@ -68,7 +69,7 @@ export const SERVICE_PAGES = {
       ["Licence", "PGE342023 disconnections"],
     ],
     wrong: [
-      { t: "Defit is where bonds go to die", b: "Landlords inspect exits hard. Ragged penetrations, live services left hanging and grease trails through common areas turn a handback into a dispute." },
+      { t: "Exits get inspected hard", b: "Ragged penetrations, live services left hanging and grease trails through common areas turn a handback into a bond dispute." },
       { t: "Greasy systems travel badly", b: "A loaded duct pulled out carelessly spreads years of grease through a tenancy on its way to the skip. Removal order and containment matter." },
       { t: "Live services aren't demolition", b: "Gas, power and water connections into exhaust equipment need licensed disconnection — 'the demo crew will sort it' is how incidents start." },
     ],
@@ -91,6 +92,7 @@ export const SERVICE_PAGES = {
     pathway: "Usually scoped as a fixed package after inspection. Pairs naturally with a new installation when the next tenant or concept is already known.",
     related: [["Kitchen Exhaust Installation", "/services/installation"]],
     cta: { label: "Plan a defit", to: "/contact?service=defit" },
+    sysnotes: ["what-landlords-expect-at-tenancy-exit", "why-cheap-ductwork-becomes-expensive"],
     image: "ind-defit.jpg",
   },
 
@@ -147,6 +149,7 @@ export const SERVICE_PAGES = {
       premium: "Heavier-gauge construction, integrated ceiling runs, low-profile lines for open kitchens, upgraded filtration and finish for front-of-house visibility. Same serviceability rules, higher spec everywhere else.",
     },
     processVerb: "Install",
+    sysnotes: ["what-makes-a-system-serviceable", "why-access-doors-matter"],
     pathway: "",
     related: [["Kitchen Exhaust Installation", "/services/installation"], ["Ductwork & Access Upgrades", "/services/ductwork-access-upgrades"]],
     cta: { label: "Plan a canopy install", to: "/contact?service=canopy-installation" },
@@ -165,7 +168,7 @@ export const SERVICE_PAGES = {
       ["Failures", "Dead · noisy · weak · misplaced"],
       ["Mounting", "Service access designed in"],
       ["Location", "Roof · wall · inline"],
-      ["Decision", "Replace vs upgrade — argued honestly"],
+      ["Decision", "Replace vs upgrade — with reasons"],
     ],
     wrong: [
       { t: "Like-for-like repeats the failure", b: "Swapping a dead fan for the same unit in the same spot buys you the same lifespan. If grease, heat or vibration killed it, the replacement inherits the killer." },
@@ -173,7 +176,7 @@ export const SERVICE_PAGES = {
       { t: "Noise complaints are design complaints", b: "A screaming fan is usually undersized, loaded with grease, or the wrong type for the run. Louder isn't stronger — it's a symptom." },
     ],
     lookFor: [
-      "Grease on the impeller — our maintenance crews open more exhaust fans than anyone, and an unbalanced, grease-loaded impeller is the most common reason 'the fan is noisy' and the most preventable killer of bearings.",
+      "Grease on the impeller — our maintenance crews open kitchen exhaust fans across SA regularly, and an unbalanced, grease-loaded impeller is the most common reason 'the fan is noisy' and the most preventable killer of bearings.",
       "Whether the fan can actually be opened and lifted where it sits — hinged bases and access clearance decide if it ever gets serviced again.",
       "What the duct run is doing to the fan: undersized runs, tight bends and blocked filters make a healthy fan test like a dying one.",
     ],
@@ -206,6 +209,7 @@ export const SERVICE_PAGES = {
       premium: "Low-noise units for acoustic-sensitive sites, upgraded bearings and speed control, relocation to better positions, and monitoring-ready wiring for sites that plan ahead.",
     },
     processVerb: "Replace",
+    sysnotes: ["replace-or-repair-exhaust-fan", "what-makes-a-system-serviceable"],
     pathway: "",
     related: [["Ductwork & Access Upgrades", "/services/ductwork-access-upgrades"], ["System Remediation", "/services/system-remediation"]],
     cta: { label: "Plan a replacement", to: "/contact?service=fan-replacement" },
@@ -266,6 +270,7 @@ export const SERVICE_PAGES = {
     },
     processVerb: "Upgrade",
     diagram: "ductline",
+    sysnotes: ["why-access-doors-matter", "why-cheap-ductwork-becomes-expensive"],
     pathway: "",
     related: [["System Remediation", "/services/system-remediation"], ["Exhaust Fan Replacement", "/services/fan-replacement"]],
     cta: { label: "Ask about access improvements", to: "/contact?service=ductwork-access-upgrades" },
@@ -279,7 +284,7 @@ export const SERVICE_PAGES = {
       title: "Kitchen Exhaust System Remediation Adelaide | Elmac Industrial",
       desc: "Remediation for leaking, underperforming, inaccessible or badly installed kitchen exhaust systems — diagnosis first, then practical fixes, staged for budget where needed.",
     },
-    lead: "For leaking, poorly installed, inaccessible or underperforming systems. We help venues fix the problems left behind by poor design, rushed installation or ageing infrastructure — starting with an honest diagnosis of why the system behaves the way it does.",
+    lead: "For leaking, poorly installed, inaccessible or underperforming systems. We help venues fix the problems left behind by poor design, rushed installation or ageing infrastructure — starting with a diagnosis — photos and reasons — of why the system behaves the way it does.",
     spec: [
       ["Symptoms", "Leaks · smoke · noise · odour"],
       ["Method", "Diagnose first, fix second"],
@@ -326,6 +331,7 @@ export const SERVICE_PAGES = {
     },
     processVerb: "Remediate",
     diagram: "failure",
+    sysnotes: ["why-cheap-ductwork-becomes-expensive", "replace-or-repair-exhaust-fan"],
     pathway: "",
     related: [["Ductwork & Access Upgrades", "/services/ductwork-access-upgrades"], ["Kitchen Exhaust Installation", "/services/installation"]],
     cta: { label: "Review an existing system", to: "/contact?service=system-remediation" },

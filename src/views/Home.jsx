@@ -4,6 +4,7 @@ import Reveal from "../components/Reveal.jsx";
 import SpecBlock from "../components/SpecBlock.jsx";
 import MagneticButton from "../components/MagneticButton.jsx";
 import DimensionDivider from "../components/DimensionDivider.jsx";
+import TrustBlock from "../components/TrustBlock.jsx";
 import usePageMeta from "../lib/usePageMeta.js";
 import { SERVICE_CARDS } from "../data/services-ind.js";
 
@@ -25,7 +26,7 @@ const PROBLEMS = [
 ];
 
 const PATHWAYS = [
-  ["Lease-Ready Compliance Works", "Smaller venues, new operators, lease requirements. Fit-for-purpose build, essential access, compliant airflow — honest, staged and buildable."],
+  ["Lease-Ready Compliance Works", "Smaller venues, new operators, lease requirements. Fit-for-purpose build, essential access, compliant airflow — scoped in writing, staged and buildable."],
   ["Performance & Access Upgrade", "For kitchens living with airflow, noise, grease or access pain. Targeted interventions, ranked by effect per dollar."],
   ["Long-Life System Fitout", "High-volume kitchens, hotels, groups, major fitouts. Heavier gauge, full access provisioning, low-noise fans, decade horizon."],
 ];
@@ -33,7 +34,7 @@ const PATHWAYS = [
 const PROCESS = [
   ["Inspect", "Site, services, structure, access — measured, not assumed."],
   ["Scope", "Fixed scope in writing; exclusions named plainly."],
-  ["Recommend", "The pathway your site actually needs — including the cheaper one."],
+  ["Recommend", "The pathway your site actually needs — including the most practical one."],
   ["Install / Defit", "Licensed trades, contained work, sites left operational."],
   ["Test", "Airflow verified, commissioning completed."],
   ["Document", "As-installed drawings, certificates, the service cycle handed over."],
@@ -75,8 +76,8 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.16 }}
           >
-            Install, defit, replacement and upgrade specialists for commercial kitchen exhaust systems — South
-            Australia. This is all we do, and we design it for the day after handover.
+            Install, defit, replacement and upgrade specialists for commercial kitchen exhaust systems — Adelaide
+            and South Australia. This is all we do, and we design it for the day after handover.
           </motion.p>
           <motion.div
             className="mt-8 flex flex-wrap gap-3"
@@ -85,10 +86,10 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.24 }}
           >
             <MagneticButton to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-accent px-5.5 py-3.5 text-[0.98rem] font-bold text-ink hover:bg-[#57bce8]">
-              Request a site inspection
+              Request a Free Site Inspection
             </MagneticButton>
-            <Link to="/services" className="inline-flex items-center gap-2 rounded-lg border border-white/[0.25] px-5.5 py-3.5 text-[0.98rem] font-bold text-white no-underline transition-colors hover:border-accent hover:text-accent">
-              View services
+            <Link to="/contact?service=tender" className="inline-flex items-center gap-2 rounded-lg border border-white/[0.25] px-5.5 py-3.5 text-[0.98rem] font-bold text-white no-underline transition-colors hover:border-accent hover:text-accent">
+              Send Plans for Review
             </Link>
           </motion.div>
           <SpecBlock
@@ -96,9 +97,9 @@ export default function Home() {
             className="mt-9 max-w-[720px]"
             items={[
               ["Licence", "PGE342023"],
-              ["Standards", "AS1668 & AS1668.2"],
+              ["Standards", "AS 1668.2 where applicable"],
               ["Scope", "Install · defit · upgrade"],
-              ["Region", "South Australia"],
+              ["Region", "Adelaide · South Australia"],
             ]}
           />
         </div>
@@ -144,12 +145,12 @@ export default function Home() {
           <Reveal>
             <span className="eyebrow">Why it's different here</span>
             <h2 className="balance mt-3.5 max-w-[24ch] text-[clamp(1.7rem,3.4vw,2.6rem)] font-extrabold leading-[1.12] tracking-[-0.02em]">
-              "Most installers rarely see their systems again. <span className="text-accent-deep">Elmac does.</span>"
+              Most installers rarely see their systems again. <span className="text-accent-deep">Elmac does.</span>
             </h2>
             <p className="mt-4 max-w-[56ch] text-[1.02rem] text-steel-600">
-              Because the wider Elmac team maintains and cleans kitchen exhaust systems long after installation, we
-              know exactly which details matter once the kitchen is operating — and which shortcuts invoice you
-              slowly for a decade.
+              An installer who never returns has no way to learn what their choices cost. Elmac's maintenance side
+              works on kitchen exhaust systems across Adelaide and South Australia — every awkward fan, missing
+              panel and uncleanable duct they meet becomes installation knowledge here.
             </p>
             <Link to="/why-specialists" className="mt-4 inline-block font-bold text-accent-deep no-underline hover:underline">
               Why dedicated specialists matter →
@@ -168,6 +169,21 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* 3b · WHO YOU'RE DEALING WITH */}
+      <section className="border-y border-steel-200 bg-white py-[clamp(44px,6vw,72px)]">
+        <div className="wrap">
+          <Reveal>
+            <span className="eyebrow">Operating credentials</span>
+            <h2 className="balance mt-3.5 max-w-[26ch] text-[clamp(1.4rem,2.8vw,2rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">
+              The facts a procurement check looks for.
+            </h2>
+          </Reveal>
+          <Reveal delay={0.06}>
+            <TrustBlock className="mt-7" />
+          </Reveal>
         </div>
       </section>
 
@@ -207,6 +223,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 4b · START WHERE YOU ARE */}
+      <section className="py-[clamp(48px,7vw,88px)]">
+        <div className="wrap">
+          <Reveal>
+            <span className="eyebrow">Start where you are</span>
+            <h2 className="balance mt-3.5 max-w-[26ch] text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">
+              Four common starting points.
+            </h2>
+          </Reveal>
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            {[
+              ["Working from drawings?", "Send through mechanical drawings, kitchen plans or exhaust documentation. We can review the package, identify access or serviceability risks, and verify site conditions before fabrication.", "Send Plans for Review", "/contact?service=tender"],
+              ["Trying to remove recurring report limitations?", "If the same access, fan or duct issue keeps appearing on cleaning reports, the answer may not be another clean. It may be an access upgrade, fan replacement or system remediation.", "Review an Existing System", "/contact?service=system-remediation"],
+              ["Make-good, reinstatement and re-letting readiness", "Defit and remediation works can support tenancy exit, lease obligations and preparation for the next operator — with the condition records both sides of the lease can rely on.", "Plan a Defit", "/contact?service=defit"],
+              ["Running a venue and weighing it up?", "Pricing usually moves with duct length, fan access, roof conditions, live-site staging, licensed trades, component supply and whether the system needs replacement or remediation. Smaller venues are supported — and inspections are free and no obligation.", "Request a Free Site Inspection", "/contact"],
+            ].map(([t, b, cta, to], i) => (
+              <Reveal key={t} delay={(i % 2) * 0.06}>
+                <div className="flex h-full flex-col rounded-xl border border-steel-200 bg-white p-6">
+                  <h3 className="text-[1.08rem] font-extrabold leading-snug">{t}</h3>
+                  <p className="mt-2.5 flex-1 text-[0.92rem] leading-relaxed text-steel-600">{b}</p>
+                  <Link to={to} className="mt-4 text-[0.88rem] font-bold text-accent-deep no-underline hover:underline">
+                    {cta} →
+                  </Link>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 5 · PATHWAYS */}
       <section className="py-[clamp(52px,8vw,96px)]">
         <div className="wrap">
@@ -216,8 +262,8 @@ export default function Home() {
               A practical system still needs to be serviceable.
             </h2>
             <p className="mt-4 max-w-[56ch] text-[1.02rem] text-steel-600">
-              We support three honest levels of build — and we'll tell you which one your site actually needs,
-              including when it's the cheaper one. What never gets cut: access, duct sealing, fan sizing.
+              We support three levels of build — and we'll tell you which one your site actually needs, including
+              when the most practical option is the right one. What never gets cut: access, duct sealing, fan sizing.
             </p>
             <Link to="/pathways" className="mt-4 inline-block font-bold text-accent-deep no-underline hover:underline">
               The full pathway guide →
@@ -226,7 +272,7 @@ export default function Home() {
           <div className="mt-9 grid gap-4 md:grid-cols-3">
             {PATHWAYS.map(([t, b], i) => (
               <Reveal key={t} delay={i * 0.07}>
-                <div className={`h-full rounded-xl border p-6 ${i === 2 ? "border-accent/[0.35] bg-accent/[0.05]" : "border-steel-200 bg-white"}`}>
+                <div className={`h-full rounded-xl border p-6 border-steel-200 bg-white`}>
                   <span className="font-mono text-[0.64rem] font-bold uppercase tracking-[0.16em] text-accent-deep">
                     Pathway {String(i + 1).padStart(2, "0")}
                   </span>
@@ -301,6 +347,8 @@ export default function Home() {
                 </p>
                 <a
                   href="https://cr8-gaffer.github.io/elmac-website/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-4 inline-block text-[0.88rem] font-bold text-accent-deep no-underline hover:underline"
                 >
                   Maintenance &amp; compliance cleaning →
@@ -334,7 +382,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={0.1} className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <MagneticButton to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3.5 text-[0.98rem] font-bold text-ink hover:bg-[#57bce8]">
-              Request a site inspection
+              Request a Free Site Inspection
             </MagneticButton>
             <a href="tel:1800435622" className="inline-flex items-center gap-2 rounded-lg border border-white/[0.25] px-6 py-3.5 text-[0.98rem] font-bold text-white no-underline transition-colors hover:border-accent hover:text-accent">
               1800 4 ELMAC

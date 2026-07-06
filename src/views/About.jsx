@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
 import SpecBlock from "../components/SpecBlock.jsx";
 import MagneticButton from "../components/MagneticButton.jsx";
@@ -37,7 +36,8 @@ export default function About() {
               items={[
                 ["Base", "Hackham, South Australia"],
                 ["Licence", "PGE342023"],
-                ["Standards", "AS1668 & AS1668.2"],
+                ["ABN", "19 526 766 573"],
+                ["Standards", "AS 1668.2 where applicable"],
                 ["Family", "Elmac Cleaning Services"],
               ]}
             />
@@ -64,6 +64,8 @@ export default function About() {
             </p>
             <a
               href="https://cr8-gaffer.github.io/elmac-website/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-5 inline-block font-bold text-accent-deep no-underline hover:underline"
             >
               Elmac Cleaning Services — maintenance &amp; compliance →
@@ -95,7 +97,7 @@ export default function About() {
           </Reveal>
           <Reveal delay={0.08}>
             <MagneticButton to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-accent px-5.5 py-3.5 text-[0.95rem] font-bold text-ink hover:bg-[#57bce8]">
-              Request a site inspection
+              Request a Free Site Inspection
             </MagneticButton>
           </Reveal>
         </div>

@@ -29,7 +29,7 @@ export default function SystemNotes() {
             A working knowledge base, not a blog: one real question per entry, answered plainly by specialists who see
             kitchen exhaust systems long after the installers have left. It grows as the questions do.
           </p>
-          <Doctrine n={28} />
+          <Doctrine n={12} />
         </Reveal>
       </section>
 
@@ -82,7 +82,7 @@ export default function SystemNotes() {
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <MagneticButton to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3.5 text-[0.98rem] font-bold text-ink hover:bg-[#57bce8]">
-                Request a site inspection
+                Request a Free Site Inspection
               </MagneticButton>
               <Link to="/services" className="inline-flex items-center gap-2 rounded-lg border border-white/[0.25] px-6 py-3.5 text-[0.98rem] font-bold text-white no-underline transition-colors hover:border-accent hover:text-accent">
                 View services →

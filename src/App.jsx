@@ -9,8 +9,11 @@ import WhySpecialists from "./views/WhySpecialists.jsx";
 import SystemNotes from "./views/SystemNotes.jsx";
 import SystemNoteDetail from "./views/SystemNoteDetail.jsx";
 import About from "./views/About.jsx";
+import Privacy from "./views/Privacy.jsx";
+import NotFound from "./views/NotFound.jsx";
 import MagneticButton from "./components/MagneticButton.jsx";
 import StickyCta from "./components/StickyCta.jsx";
+import track from "./lib/track.js";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -47,6 +50,21 @@ export default function App() {
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
   useEffect(() => setOpen(false), [pathname]);
+
+  // Site-wide CTA + phone click events; label distinguishes which CTA fired.
+  useEffect(() => {
+    const onClick = (e) => {
+      const a = e.target.closest?.("a");
+      if (!a) return;
+      const href = a.getAttribute("href") || "";
+      const label = (a.textContent || "").trim().slice(0, 60);
+      const mobile = String(window.innerWidth < 768);
+      if (href.startsWith("tel:")) track("phone_click", { label, mobile });
+      else if (href.includes("/contact")) track("cta_click", { label, mobile });
+    };
+    document.addEventListener("click", onClick, true);
+    return () => document.removeEventListener("click", onClick, true);
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -93,7 +111,7 @@ export default function App() {
                 to="/contact"
                 className="rounded-lg bg-accent px-4 py-3 text-center text-[0.92rem] font-bold text-ink no-underline"
               >
-                Request a site inspection
+                Request a Free Site Inspection
               </Link>
               <a
                 href="tel:1800435622"
@@ -113,7 +131,7 @@ export default function App() {
             to="/contact"
             className="hidden md:inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-[0.85rem] font-bold text-ink hover:bg-[#57bce8]"
           >
-            Request a site inspection
+            Request a Free Site Inspection
           </MagneticButton>
         </div>
       </header>
@@ -129,61 +147,83 @@ export default function App() {
           <Route path="/system-notes/:slug" element={<SystemNoteDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Home />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
 
       <StickyCta />
 
       <footer className="border-t border-white/10 bg-ink-3 pb-8 pt-10 text-[0.84rem] text-steel-400">
-        <div className="wrap grid gap-8 md:grid-cols-[1.2fr_0.9fr_1fr]">
+        <div className="wrap grid gap-8 md:grid-cols-[1.15fr_0.75fr_1.1fr]">
           <div>
             <Brand className="text-base" />
             <p className="mt-3.5 max-w-[40ch] leading-relaxed">
               Dedicated commercial kitchen exhaust specialists — installation, defit, replacement and upgrade,
-              designed for the day after handover. South Australia.
+              designed for the day after handover. Adelaide &amp; South Australia.
+            </p>
+            <p className="mt-3 font-mono text-[0.7rem] tracking-[0.04em] text-steel-300">
+              Elmac Industrial Services · ABN 19 526 766 573
             </p>
             <p className="mt-3.5 font-mono text-[0.64rem] uppercase leading-relaxed tracking-[0.12em] text-steel-400">
               Part of the Elmac family —{" "}
-              <a href="https://cr8-gaffer.github.io/elmac-website/" className="text-steel-300 underline-offset-2 hover:text-accent">
+              <a
+                href="https://cr8-gaffer.github.io/elmac-website/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-steel-300 underline-offset-2 hover:text-accent"
+              >
                 Elmac Cleaning Services
               </a>{" "}
               maintains what we build.
             </p>
           </div>
           <div>
-            <div className="font-mono text-[0.66rem] uppercase tracking-[0.14em] text-steel-400">Services</div>
+            <div className="font-mono text-[0.66rem] uppercase tracking-[0.14em] text-steel-400">Explore</div>
             <div className="mt-3 grid gap-2">
               {[
-                ["All services", "/services"],
+                ["Services", "/services"],
                 ["Pathways", "/pathways"],
                 ["Why specialists matter", "/why-specialists"],
                 ["System Notes", "/system-notes"],
                 ["About", "/about"],
-                ["Request a site inspection", "/contact"],
+                ["Contact", "/contact"],
+                ["Privacy", "/privacy"],
               ].map(([t, to]) => (
                 <Link key={to} to={to} className="text-[#B9C2CA] no-underline hover:text-accent">
                   {t}
                 </Link>
               ))}
+              <Link
+                to="/contact"
+                className="mt-1 inline-block w-fit rounded-lg bg-accent px-4 py-2.5 text-[0.85rem] font-bold text-ink no-underline hover:bg-[#57bce8]"
+              >
+                Request a Free Site Inspection
+              </Link>
             </div>
           </div>
           <div>
             <div className="font-mono text-[0.66rem] uppercase tracking-[0.14em] text-steel-400">Contact</div>
             <div className="mt-3 grid gap-2">
+              <span className="font-bold text-white">Benn Cox</span>
+              <span className="-mt-1.5 text-[0.8rem]">Managing Director — Elmac Industrial Services</span>
+              <a href="tel:+61487000699" className="text-[#B9C2CA] no-underline hover:text-accent">
+                +61 487 000 699
+              </a>
+              <a href="mailto:benn@elmacindustrial.com.au" className="text-[#B9C2CA] no-underline hover:text-accent">
+                benn@elmacindustrial.com.au
+              </a>
               <a href="tel:1800435622" className="text-[#B9C2CA] no-underline hover:text-accent">
-                1800 4 ELMAC (1800 435 622)
+                1800 4 ELMAC / 1800 435 622
               </a>
-              <a href="mailto:benn@elmac.au" className="text-[#B9C2CA] no-underline hover:text-accent">
-                benn@elmac.au
-              </a>
+              <span className="text-[0.8rem]">24/7 phone availability for urgent site issues</span>
               <span>30 Chapman Road, Hackham SA 5163</span>
             </div>
           </div>
         </div>
         <div className="wrap mt-9 flex flex-wrap items-center justify-between gap-3 border-t border-white/[0.08] pt-6">
-          <span>© {new Date().getFullYear()} Elmac Industrial · Proudly South Australian.</span>
-          <span className="font-mono tracking-[0.08em]">PGE342023 · AS1668 · AS1668.2 · Rev. Jul 2026</span>
+          <span>© {new Date().getFullYear()} Elmac Industrial Services · ABN 19 526 766 573 · Proudly South Australian.</span>
+          <span className="font-mono tracking-[0.08em]">PGE342023 · AS 1668.2 where applicable · Rev. Jul 2026</span>
         </div>
       </footer>
     </div>

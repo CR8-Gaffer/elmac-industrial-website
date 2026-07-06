@@ -9,6 +9,7 @@ import FailurePoint from "../components/FailurePoint.jsx";
 import usePageMeta from "../lib/usePageMeta.js";
 import { SERVICE_PAGES } from "../data/services-ind.js";
 import { DOCTRINE_BY_SLUG } from "../data/doctrine.js";
+import { noteBySlug } from "../data/systemnotes.js";
 
 const A = (f) => `${import.meta.env.BASE_URL}assets/${f}`;
 
@@ -235,7 +236,7 @@ export default function ServiceDetailInd() {
               {[
                 ["Inspect", "Site, system, access and services — measured, not assumed."],
                 ["Scope", "Fixed scope in writing; exclusions named plainly."],
-                ["Recommend", "The pathway the site actually needs — including the cheaper one."],
+                ["Recommend", "The pathway the site actually needs — including the most practical one."],
                 [svc.processVerb || "Install / upgrade", "Licensed trades, contained work, site left operational."],
                 ["Test", "Airflow and operation verified before we call it done."],
                 ["Document", "What was done, what we found, what to watch — handed over."],
@@ -253,10 +254,32 @@ export default function ServiceDetailInd() {
         </section>
       )}
 
+      {/* RELATED SYSTEM NOTES */}
+      {svc.sysnotes && (
+        <section className="border-t border-steel-200 bg-white py-[clamp(40px,5vw,64px)]">
+          <div className="wrap">
+            <Reveal>
+              <span className="eyebrow">Related System Notes</span>
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                {svc.sysnotes.map(noteBySlug).filter(Boolean).map((n) => (
+                  <Link key={n.slug} to={`/system-notes/${n.slug}`} className="group rounded-xl border border-steel-200 bg-paper p-4.5 no-underline transition-colors hover:border-accent/60">
+                    <span className="font-mono text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-accent-deep">{n.code}</span>
+                    <div className="mt-1.5 text-[0.92rem] font-bold leading-snug text-ink group-hover:underline">{n.q}</div>
+                  </Link>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
       {/* CTA */}
       <section className="bg-ink py-[clamp(52px,8vw,96px)] text-white">
         <div className="wrap flex flex-col items-center text-center">
           <Reveal>
+            <p className="mb-5 font-mono text-[0.66rem] uppercase tracking-[0.12em] text-steel-500">
+              Elmac Industrial Services · ABN 19 526 766 573 · $20M public liability · SWMS as required · PGE342023
+            </p>
             <Doctrine n={DOCTRINE_BY_SLUG[slug] || 21} dark center />
             <h2 className="balance max-w-[26ch] text-[clamp(1.6rem,3.2vw,2.4rem)] font-extrabold leading-[1.08] tracking-[-0.02em]">
               Start with an inspection — we'll tell you what your site actually needs.

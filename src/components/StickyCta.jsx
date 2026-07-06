@@ -30,7 +30,7 @@ export default function StickyCta() {
           to="/contact"
           className="flex-1 rounded-lg bg-accent py-3 text-center text-[0.92rem] font-bold text-ink no-underline"
         >
-          Request a site inspection
+          Request a Free Site Inspection
         </Link>
         <a
           href="tel:1800435622"

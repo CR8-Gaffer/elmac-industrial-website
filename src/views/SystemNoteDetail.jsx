@@ -97,7 +97,7 @@ export default function SystemNoteDetail() {
           </Reveal>
           <Reveal delay={0.08}>
             <MagneticButton to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-accent px-5.5 py-3.5 text-[0.95rem] font-bold text-ink hover:bg-[#57bce8]">
-              Request a site inspection
+              Request a Free Site Inspection
             </MagneticButton>
           </Reveal>
         </div>

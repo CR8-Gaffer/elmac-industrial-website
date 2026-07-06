@@ -25,7 +25,7 @@ const PATHWAYS = [
     works: ["Fit-for-purpose canopy supply or rectification", "Essential access panels at the points that matter most", "Sealed duct connections and licensed service terminations", "Clear written scope with staging where cash flow needs it"],
     accessNote: "Saving money at install stage should not mean hiding the next maintenance problem inside the ceiling.",
     ignored: "The cheapest possible works, done blind, become the leaking joints and inaccessible runs that the next five years of cleaning reports keep flagging — and that make-good inspections keep failing.",
-    next: ["Request a site inspection", "/contact"],
+    next: ["Request a Free Site Inspection", "/contact"],
   },
   {
     id: "performance-access",
@@ -103,12 +103,12 @@ export default function Pathways() {
               Choose the right kitchen exhaust pathway for the venue, not just the quote.
             </h1>
             <p className="mt-5 max-w-[58ch] text-[clamp(1rem,1.5vw,1.12rem)] text-[#C6CFD6]">
-              From lease-ready works to performance upgrades and long-life fitouts, Elmac Industrial helps venues
-              choose systems that suit the kitchen, the site constraints and the maintenance cycle.
+              Three levels of build, matched to the kitchen, the site and the maintenance cycle — and we'll tell
+              you when the most practical option is the right one.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <MagneticButton to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-accent px-5.5 py-3.5 text-[0.98rem] font-bold text-ink hover:bg-[#57bce8]">
-                Request a site inspection
+                Request a Free Site Inspection
               </MagneticButton>
               <Link to="/contact?service=system-remediation" className="inline-flex items-center gap-2 rounded-lg border border-white/[0.25] px-5.5 py-3.5 text-[0.98rem] font-bold text-white no-underline transition-colors hover:border-accent hover:text-accent">
                 Review an existing system
@@ -173,7 +173,7 @@ export default function Pathways() {
           <div className="mt-9 grid gap-4 lg:grid-cols-3">
             {PATHWAYS.map((p, i) => (
               <Reveal key={p.id} delay={i * 0.07}>
-                <div className={`flex h-full flex-col rounded-xl border p-6 ${i === 2 ? "border-accent/[0.35] bg-accent/[0.04]" : "border-steel-200 bg-paper"}`}>
+                <div className={`flex h-full flex-col rounded-xl border p-6 border-steel-200 bg-paper`}>
                   <span className="font-mono text-[0.64rem] font-bold uppercase tracking-[0.16em] text-accent-deep">
                     Pathway {String(i + 1).padStart(2, "0")}
                   </span>
@@ -205,7 +205,7 @@ export default function Pathways() {
               <h2 className="balance mt-3.5 max-w-[26ch] text-[clamp(1.6rem,3.2vw,2.4rem)] font-extrabold leading-[1.1] tracking-[-0.02em]">
                 {p.label}
               </h2>
-              <p className="mt-3 text-[1.05rem] font-bold text-accent-deep">"{p.core}"</p>
+              <p className="mt-3 text-[1.05rem] font-bold text-accent-deep">{p.core}</p>
               <div className="mt-4 grid max-w-[68ch] gap-3 text-[1rem] leading-relaxed text-steel-600">
                 {p.when.map((t, x) => (
                   <p key={x}>{t}</p>
@@ -357,7 +357,7 @@ export default function Pathways() {
             </h2>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <MagneticButton to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3.5 text-[0.98rem] font-bold text-ink hover:bg-[#57bce8]">
-                Request a site inspection
+                Request a Free Site Inspection
               </MagneticButton>
               <a href="tel:1800435622" className="inline-flex items-center gap-2 rounded-lg border border-white/[0.25] px-6 py-3.5 text-[0.98rem] font-bold text-white no-underline transition-colors hover:border-accent hover:text-accent">
                 1800 4 ELMAC
