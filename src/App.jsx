@@ -29,7 +29,7 @@ function Brand({ className = "" }) {
   return (
     <Link
       to="/"
-      className={`flex items-baseline gap-0.5 font-extrabold tracking-wide text-white no-underline text-[1.22rem] ${className}`}
+      className={`flex items-baseline gap-0.5 font-extrabold tracking-wide text-white no-underline text-[1.05rem] lg:text-[1.22rem] ${className}`}
     >
       <span className="display-wide italic text-accent">ELMAC</span>
       <small className="ml-2 -translate-y-0.5 font-mono text-[0.54rem] font-semibold uppercase tracking-[0.22em] text-steel-400">
@@ -40,7 +40,7 @@ function Brand({ className = "" }) {
 }
 
 const navLink = ({ isActive }) =>
-  `whitespace-nowrap rounded-md px-2.5 py-2 text-[0.88rem] font-semibold tracking-[0.01em] transition-colors ${
+  `whitespace-nowrap rounded-md px-1 py-2 text-[0.84rem] font-semibold tracking-[0.01em] transition-colors lg:px-2.5 lg:text-[0.88rem] ${
     isActive
       ? "text-white after:mt-1 after:block after:h-0.5 after:rounded after:bg-accent"
       : "text-[#C9D0D6] hover:bg-white/5 hover:text-white"
@@ -71,7 +71,7 @@ export default function App() {
       <ScrollToTop />
 
       <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/90 backdrop-blur-md">
-        <div className="wrap flex h-16 items-center gap-3">
+        <div className="wrap flex h-16 items-center gap-2 lg:gap-3">
           <Brand />
           <button
             className="ml-auto grid h-10 w-10 place-items-center rounded-lg border border-white/20 text-white md:hidden"
@@ -86,7 +86,7 @@ export default function App() {
               open
                 ? "absolute left-0 right-0 top-16 flex flex-col gap-1 border-b border-white/10 bg-ink-2 p-3"
                 : "hidden"
-            } md:static md:ml-auto md:flex md:flex-row md:gap-0.5 md:border-0 md:bg-transparent md:p-0`}
+            } md:static md:ml-auto md:flex md:flex-row md:gap-0 md:border-0 md:bg-transparent md:p-0 lg:gap-0.5`}
           >
             <NavLink to="/" end className={navLink}>
               Home
@@ -129,7 +129,7 @@ export default function App() {
           </a>
           <MagneticButton
             to="/contact"
-            className="hidden md:inline-flex items-center gap-2 whitespace-nowrap rounded-lg bg-accent px-3 py-2.5 text-[0.82rem] font-bold text-ink hover:bg-[#57bce8] lg:px-4 lg:text-[0.85rem]"
+            className="hidden md:inline-flex items-center gap-2 whitespace-nowrap rounded-lg bg-accent px-2.5 py-2.5 text-[0.8rem] font-bold text-ink hover:bg-[#57bce8] lg:px-4 lg:text-[0.85rem]"
           >
             <span className="xl:hidden">Free Site Inspection</span>
             <span className="hidden xl:inline">Request a Free Site Inspection</span>
