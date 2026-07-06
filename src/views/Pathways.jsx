@@ -25,7 +25,7 @@ const PATHWAYS = [
     works: ["Fit-for-purpose canopy supply or rectification", "Essential access panels at the points that matter most", "Sealed duct connections and licensed service terminations", "Clear written scope with staging where cash flow needs it"],
     accessNote: "Saving money at install stage should not mean hiding the next maintenance problem inside the ceiling.",
     ignored: "The cheapest possible works, done blind, become the leaking joints and inaccessible runs that the next five years of cleaning reports keep flagging — and that make-good inspections keep failing.",
-    next: ["Request a site inspection", "/contact?service=installation"],
+    next: ["Request a site inspection", "/contact"],
   },
   {
     id: "performance-access",

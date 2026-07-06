@@ -88,12 +88,32 @@ export default function App() {
             <NavLink to="/contact" className={navLink}>
               Contact
             </NavLink>
+            <div className="mt-2 grid gap-2 border-t border-white/10 pt-3 md:hidden">
+              <Link
+                to="/contact"
+                className="rounded-lg bg-accent px-4 py-3 text-center text-[0.92rem] font-bold text-ink no-underline"
+              >
+                Request a site inspection
+              </Link>
+              <a
+                href="tel:1800435622"
+                className="rounded-lg border border-white/[0.25] px-4 py-3 text-center text-[0.92rem] font-bold text-white no-underline"
+              >
+                Call 1800 4 ELMAC (1800 435 622)
+              </a>
+            </div>
           </nav>
+          <a
+            href="tel:1800435622"
+            className="hidden lg:inline-flex items-center rounded-lg border border-white/[0.25] px-3.5 py-2.5 text-[0.85rem] font-bold text-white no-underline transition-colors hover:border-accent hover:text-accent"
+          >
+            1800 4 ELMAC
+          </a>
           <MagneticButton
             to="/contact"
             className="hidden md:inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-[0.85rem] font-bold text-ink hover:bg-[#57bce8]"
           >
-            Request an inspection
+            Request a site inspection
           </MagneticButton>
         </div>
       </header>
@@ -152,7 +172,7 @@ export default function App() {
             <div className="font-mono text-[0.66rem] uppercase tracking-[0.14em] text-steel-400">Contact</div>
             <div className="mt-3 grid gap-2">
               <a href="tel:1800435622" className="text-[#B9C2CA] no-underline hover:text-accent">
-                1800 4 ELMAC
+                1800 4 ELMAC (1800 435 622)
               </a>
               <a href="mailto:benn@elmac.au" className="text-[#B9C2CA] no-underline hover:text-accent">
                 benn@elmac.au

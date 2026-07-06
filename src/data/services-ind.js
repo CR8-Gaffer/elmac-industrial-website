@@ -149,7 +149,7 @@ export const SERVICE_PAGES = {
     processVerb: "Install",
     pathway: "",
     related: [["Kitchen Exhaust Installation", "/services/installation"], ["Ductwork & Access Upgrades", "/services/ductwork-access-upgrades"]],
-    cta: { label: "Request a site inspection", to: "/contact?service=canopy-installation" },
+    cta: { label: "Plan a canopy install", to: "/contact?service=canopy-installation" },
     image: "ind-workshop.jpg",
   },
 

@@ -49,12 +49,12 @@ export default function ServiceDetailInd() {
               >
                 {svc.cta.label}
               </MagneticButton>
-              <Link
-                to="/contact"
+              <a
+                href="tel:1800435622"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/[0.25] px-5.5 py-3.5 text-[0.98rem] font-bold text-white no-underline transition-colors hover:border-accent hover:text-accent"
               >
-                Request a site inspection
-              </Link>
+                1800 4 ELMAC
+              </a>
             </div>
             <SpecBlock dark className="mt-9 max-w-[680px]" items={svc.spec} />
           </Reveal>
