@@ -25,7 +25,9 @@ export default function WhySpecialists() {
 
   return (
     <>
-      <section className="bg-ink py-[clamp(52px,8vw,96px)] text-white">
+      <section className="relative isolate overflow-hidden bg-ink py-[clamp(52px,8vw,96px)] text-white">
+        <img src={`${import.meta.env.BASE_URL}assets/ind-fan-mount.jpg`} alt="" className="absolute inset-0 -z-20 h-full w-full object-cover opacity-25" aria-hidden="true" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(20,24,28,0.95)_0%,rgba(20,24,28,0.78)_55%,rgba(20,24,28,0.5)_100%)]" />
         <div className="wrap">
           <Reveal>
             <span className="eyebrow eyebrow--accent">Why specialists matter</span>

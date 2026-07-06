@@ -50,7 +50,7 @@ export const SERVICE_PAGES = {
     pathway: "Fits all three pathways — Lease-Ready Compliance Works for a first café, through to a Long-Life System Fitout for hotels and groups. The serviceability details above are never the corner we cut.",
     related: [["Kitchen Exhaust Defit", "/services/defit"]],
     cta: { label: "Discuss an install", to: "/contact?service=installation" },
-    image: "svc-install.jpg",
+    image: "ind-canopy-install.jpg",
   },
 
   defit: {
@@ -91,7 +91,7 @@ export const SERVICE_PAGES = {
     pathway: "Usually scoped as a fixed package after inspection. Pairs naturally with a new installation when the next tenant or concept is already known.",
     related: [["Kitchen Exhaust Installation", "/services/installation"]],
     cta: { label: "Plan a defit", to: "/contact?service=defit" },
-    image: "doc-roof-array.jpg",
+    image: "ind-defit.jpg",
   },
 
   "canopy-installation": {
@@ -150,7 +150,7 @@ export const SERVICE_PAGES = {
     pathway: "",
     related: [["Kitchen Exhaust Installation", "/services/installation"], ["Ductwork & Access Upgrades", "/services/ductwork-access-upgrades"]],
     cta: { label: "Request a site inspection", to: "/contact?service=canopy-installation" },
-    image: "svc-install.jpg",
+    image: "ind-workshop.jpg",
   },
 
   "fan-replacement": {
@@ -209,7 +209,7 @@ export const SERVICE_PAGES = {
     pathway: "",
     related: [["Ductwork & Access Upgrades", "/services/ductwork-access-upgrades"], ["System Remediation", "/services/system-remediation"]],
     cta: { label: "Plan a replacement", to: "/contact?service=fan-replacement" },
-    image: "doc-roof-array.jpg",
+    image: "ind-crane-fan.jpg",
   },
 
   "ductwork-access-upgrades": {
@@ -265,10 +265,11 @@ export const SERVICE_PAGES = {
       premium: "Full-system access provisioning to the standard a new install would carry, plus rerouting and fall correction where the original design fights maintenance.",
     },
     processVerb: "Upgrade",
+    diagram: "ductline",
     pathway: "",
     related: [["System Remediation", "/services/system-remediation"], ["Exhaust Fan Replacement", "/services/fan-replacement"]],
     cta: { label: "Ask about access improvements", to: "/contact?service=ductwork-access-upgrades" },
-    image: "doc-depot-dawn.jpg",
+    image: "ind-access-door.jpg",
   },
 
   "system-remediation": {
@@ -324,9 +325,10 @@ export const SERVICE_PAGES = {
       premium: "Full-system remediation in one program — sealing, access, airflow, fan and controls brought to the standard a new install would carry, without paying for a new install.",
     },
     processVerb: "Remediate",
+    diagram: "failure",
     pathway: "",
     related: [["Ductwork & Access Upgrades", "/services/ductwork-access-upgrades"], ["Kitchen Exhaust Installation", "/services/installation"]],
     cta: { label: "Review an existing system", to: "/contact?service=system-remediation" },
-    image: "doc-harness-check.jpg",
+    image: "ind-duct-run.jpg",
   },
 };

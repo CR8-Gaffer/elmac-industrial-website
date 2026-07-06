@@ -50,7 +50,7 @@ export default function Home() {
     <>
       {/* 1 · HERO */}
       <section className="relative isolate overflow-hidden bg-ink text-white">
-        <img src={A("svc-install.jpg")} alt="" className="absolute inset-0 -z-20 h-full w-full object-cover opacity-25" aria-hidden="true" />
+        <img src={A("ind-canopy-install.jpg")} alt="" className="absolute inset-0 -z-20 h-full w-full object-cover opacity-25" aria-hidden="true" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(20,24,28,0.95)_0%,rgba(20,24,28,0.78)_55%,rgba(20,24,28,0.5)_100%)]" />
         <div className="wrap relative py-[clamp(56px,10vw,120px)]">
           <motion.span

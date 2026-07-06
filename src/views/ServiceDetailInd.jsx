@@ -4,6 +4,8 @@ import SpecBlock from "../components/SpecBlock.jsx";
 import AccessNote from "../components/AccessNote.jsx";
 import MagneticButton from "../components/MagneticButton.jsx";
 import Doctrine from "../components/Doctrine.jsx";
+import DuctlineDiagram from "../components/DuctlineDiagram.jsx";
+import FailurePoint from "../components/FailurePoint.jsx";
 import usePageMeta from "../lib/usePageMeta.js";
 import { SERVICE_PAGES } from "../data/services-ind.js";
 import { DOCTRINE_BY_SLUG } from "../data/doctrine.js";
@@ -103,6 +105,17 @@ export default function ServiceDetailInd() {
                 </Reveal>
               ))}
             </div>
+          </div>
+        </section>
+      )}
+
+      {/* SYSTEM DIAGRAM */}
+      {svc.diagram && (
+        <section className="border-t border-steel-200 bg-white pb-[clamp(48px,7vw,88px)]">
+          <div className="wrap">
+            <Reveal>
+              {svc.diagram === "ductline" ? <DuctlineDiagram /> : <FailurePoint />}
+            </Reveal>
           </div>
         </section>
       )}

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
 import AccessNote from "../components/AccessNote.jsx";
+import DuctlineDiagram from "../components/DuctlineDiagram.jsx";
 import MagneticButton from "../components/MagneticButton.jsx";
 import DimensionDivider from "../components/DimensionDivider.jsx";
 import usePageMeta from "../lib/usePageMeta.js";
@@ -92,7 +93,9 @@ export default function Pathways() {
   return (
     <>
       {/* 1 · HERO */}
-      <section className="bg-ink py-[clamp(52px,8vw,96px)] text-white">
+      <section className="relative isolate overflow-hidden bg-ink py-[clamp(52px,8vw,96px)] text-white">
+        <img src={`${import.meta.env.BASE_URL}assets/ind-site-measure.jpg`} alt="" className="absolute inset-0 -z-20 h-full w-full object-cover opacity-25" aria-hidden="true" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(20,24,28,0.95)_0%,rgba(20,24,28,0.78)_55%,rgba(20,24,28,0.5)_100%)]" />
         <div className="wrap">
           <Reveal>
             <span className="eyebrow eyebrow--accent">Pathways</span>
@@ -144,6 +147,16 @@ export default function Pathways() {
                 ))}
               </div>
             </div>
+          </Reveal>
+        </div>
+        <div className="wrap mt-[clamp(28px,4vw,48px)]">
+          <Reveal delay={0.12}>
+            <DuctlineDiagram />
+            <p className="mt-4 max-w-[60ch] text-[0.95rem] text-steel-600">
+              Whatever the pathway, the system is judged against the same line: can every point on the
+              grease path be reached, sealed and serviced? That question decides more of the next five
+              years than the install price does.
+            </p>
           </Reveal>
         </div>
       </section>
