@@ -5,11 +5,12 @@ import TrustBlock from "../components/TrustBlock.jsx";
 import usePageMeta from "../lib/usePageMeta.js";
 import track from "../lib/track.js";
 
-// Static-form endpoint (Formspree / Basin / Getform class). Paste the URL when
-// the account exists — e.g. "https://formspree.io/f/XXXXXXXX". Until it's set,
-// the form falls back to mailto + an on-page copy block so no typed enquiry is
-// ever lost.
-const FORM_ENDPOINT = "";
+// FormSubmit.co — account-less static form relay to benn@elmacindustrial.com.au.
+// The first submission triggers a one-click activation email to that inbox;
+// until it's activated (or if the relay ever errors) the mailto + copy fallback
+// carries the enquiry, so nothing is ever lost. To move to Formspree/Basin
+// later, replace this URL only — payload and states already fit.
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/benn@elmacindustrial.com.au";
 const EMAIL = "benn@elmacindustrial.com.au";
 
 const ENQUIRY_TYPES = [
@@ -120,9 +121,16 @@ export default function Contact() {
         const res = await fetch(FORM_ENDPOINT, {
           method: "POST",
           headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify({ ...fields, _subject: subject }),
+          body: JSON.stringify({
+            ...fields,
+            _subject: subject,
+            _template: "table",
+            _captcha: "false",
+            _honey: "",
+          }),
         });
-        if (!res.ok) throw new Error(`endpoint ${res.status}`);
+        const data = await res.json().catch(() => null);
+        if (!res.ok || !data || String(data.success) === "false") throw new Error(`endpoint ${res.status}`);
         setStatus("success");
         track("form_submit_success", { enquiry, scope: fields.scope, deadline: String(deadline) });
         return;
