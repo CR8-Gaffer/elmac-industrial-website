@@ -48,6 +48,10 @@ print("3/5 static origins (index.html, sitemap, robots)")
 for f in ["index.html", "public/sitemap.xml", "public/robots.txt"]:
     sub(f, OLD, NEW)
 
+print("3b/5 cross-links to the Cleaning site -> www.elmac.au")
+for f in ["src/App.jsx", "src/views/Home.jsx", "src/views/About.jsx"]:
+    sub(f, "https://cr8-gaffer.github.io/elmac-website/", "https://www.elmac.au/", required=False)
+
 print("4/5 CNAME file")
 (ROOT / "public" / "CNAME").write_text("www.elmacindustrial.com.au\n")
 print("  public/CNAME written")
@@ -56,10 +60,11 @@ print("5/5 residual check")
 leftovers = []
 for f in ROOT.rglob("*"):
     if f.is_file() and f.suffix in {".js", ".jsx", ".html", ".xml", ".txt", ".mjs", ".json"} \
-            and "node_modules" not in f.parts and "dist" not in f.parts:
+            and "node_modules" not in f.parts and "dist" not in f.parts \
+            and f.name != "cutover.py":
         if OLD in f.read_text(errors="ignore"):
             leftovers.append(str(f.relative_to(ROOT)))
 print(f"  residual '{OLD}' references: {leftovers or 'none'}")
 print("\nDone. Review with git diff, then commit + push. Manual steps are in this file's docstring.")
-print("Note: links to the CLEANING site (cr8-gaffer.github.io/elmac-website) are")
-print("intentionally untouched — they flip when elmac.au cuts over.")
+print("Note: cross-links to the Cleaning site were flipped to www.elmac.au —")
+print("run this together with the elmac.au cutover so neither side links to a dead URL.")
